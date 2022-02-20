@@ -1,0 +1,167 @@
+.background-image {
+    background: url('./nightSky2.png')
+    0% 80%;
+    background-size: 1200px auto;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    will-change: transform;
+    animation: moveIt 12s infinite linear;
+    z-index: -1;
+}
+
+@keyframes moveIt {
+    to {
+        background-position: -1200px 80%;
+      }
+}
+
+@font-face {
+    font-family: "outrun";
+    src: url("./outrun-future.otf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'outrun';
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-highlight:hover {
+    background-color: #A49CBF;
+}
+
+.bg-color-contrast {
+    background-color: #b79c2b;
+}
+
+.container {
+    max-width: 100%;
+    width: 950px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    line-height: 125%;
+    width: 100%;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+    text-shadow: 0 0.05rem 0.3rem rgba(0,0,0,1);
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 50px;    
+    text-shadow: 0 0.05rem 0.3rem rgba(0,0,0,1);
+}
+
+.btn {
+    height: 60px;
+    width: 300px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #2B46B7;
+    color: #eee;
+    border: solid white 1px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #eee;
+    color: #333;
+}
+
+
+/* loader */
+
+.hidden {
+    display: none;
+}
+
+.loader > div {
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem 0 rgba(51, 51, 51, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    animation: 1.5s dot infinite ease-in-out both;
+}
+
+.loader .dot {
+    animation-delay: -0.3s;
+}
+
+.loader .dot2 {
+    animation-delay: -0.15s;
+}
+
+@keyframes dot {
+    0%, 80%, 100%{
+        transform: scale(0);
+    }
+    40%{
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1050px) {
+    .container {
+        margin: 0 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    .title {
+        font-size: 6rem;
+        margin-bottom: 100px;
+    }
+    .btn {
+        margin-bottom: 8px;
+        border: solid white 1px;
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .title {
+        word-spacing: 999rem;
+        font-size: 20vw;
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        margin-bottom: 150px;
+    }
+    .btn {
+        width: 90%;
+        margin-bottom: 16px;    }
+}
+
+@media (max-width: 470px) {
+    .heading {
+        font-size: 2rem;
+    }
+}
+

@@ -1,0 +1,155 @@
+.question {
+    text-shadow: 0 0.05rem 0.3rem rgba(0,0,0,1);
+    margin-bottom: 35px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.choice__container {
+    border: none;
+    overflow: hidden;
+    border-radius: 1.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.choice__container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(164,156,191, 1);
+    transform: translateX(-0.5rem);
+    transition: transform 200ms;
+}
+
+.choice__prefix {
+      padding: 1.5rem 2.5rem;
+      color: white;
+      min-width: 103px;
+      min-height: 103px;
+}
+
+.choice__text {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    text-align: left;
+    padding: 0 10px;
+    width: 100%;
+    color: #333;
+}
+
+.correct {
+    background-color: #2bb79c;
+}
+
+.incorrect {
+    background-color: #b72b46;
+}
+
+/* HUD */
+
+.hud {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.hud__item__text {
+    font-size: 2rem;
+}
+
+.abandon_mobile {
+    display: none;
+    margin-top: 25px;
+}
+
+.fifty-fifty {
+    position: relative;
+    height: 65px;
+    width: 65px;
+    font-size: 1em;
+    font-weight: 500;
+	border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.fifty-fifty:hover {
+    background-color: #d7bc4b;
+}
+
+.fifty-fifty__counter {
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    font-size: 0.8rem;
+    color: #595959;
+}
+
+.fifty-fifty_empty:hover {
+    cursor: default;
+}
+
+.fifty-fifty_empty{
+    background-color: transparent;
+    color: transparent;
+}
+
+.exclude p {
+    color: transparent;
+}
+
+.no-hover{
+    pointer-events: none;
+}
+
+@media (max-width: 850px) {
+    .choice__container {
+        border-radius: 1.8rem;
+        margin-bottom: 8px;
+        font-size: 1rem;
+    }
+
+    .choice__prefix {
+        padding: 1.5rem 2.5rem;
+        min-width: 75px;
+        min-height: 75px;
+  }
+}
+
+@media (max-width: 750px) {
+
+    .abandon_pc {
+        display: none;
+    }
+    .abandon_mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .question {
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 1.5rem;
+        width: 110%;
+        left: 50%;
+transform: translateX(-50%);
+    }
+    .choice__container {
+    max-height: 3rem;
+    }
+    .choice-text {
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: none;
+    }
+}

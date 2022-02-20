@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Point | Game</title>
+
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/game.css">
+</head>
+
+<body>
+    <div class="background-image"></div>
+
+    <div class="container">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+        </div>
+        <div class="game hidden">
+            <div class="hud">
+                <div class="hud__item">
+                    <button class="fifty-fifty color-highlight bg-color-contrast">
+                        50/50
+                        <p class="fifty-fifty__counter">
+                            0
+                        </p>
+                    </button>
+                </div>
+                <div id="hud__item">
+                    <button class="btn border-box abandon abandon_pc">Home</button>
+                </div>
+                <div id="hud__item">
+                    <p class="hud__item__prefix">
+                        Score
+                    </p>
+                    <h2 class="hud__item__text text-center" id="score-text">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <h2 class="question text-center"></h2>
+            <button class="choice__container" data-number="1">
+                <p class="choice__prefix bg-color-contrast">A</p>
+                <p class="choice__text"></p>
+            </button>
+            <button class="choice__container" data-number="2">
+                <p class="choice__prefix bg-color-contrast">B</p>
+                <p class="choice__text"></p>
+            </button>
+            <button class="choice__container" data-number="3">
+                <p class="choice__prefix bg-color-contrast">C</p>
+                <p class="choice__text"></p>
+            </button>
+            <button class="choice__container" data-number="4">
+                <p class="choice__prefix bg-color-contrast">D</p>
+                <p class="choice__text"></p>
+            </button>
+
+        </div>
+        <button class="btn border-box abandon abandon_mobile">Home</button>
+
+    </div>
+
+    <script src="/game.js"></script>
+</body>
+
+</html>
